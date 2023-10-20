@@ -2,6 +2,12 @@
 
 An MkDocs plugin to add furigana to Japanese Kanji text.
 
+## Installation
+
+```
+pip3 install https://github.com/ijaureguialzo/mkdocs-furigana-plugin/archive/refs/heads/master.zip
+```
+
 ## Usage
 
 Write kanji like this:
@@ -35,11 +41,11 @@ To enable the plugin and the CSS edit the `mkdocs.yml` file:
 
 ```yaml
 plugins:
-  - furigana:
-      multiple: "§"
-      inicio: "【"
-      fin: "】"
+    -   furigana:
+            multiple: "§"
+            inicio: "【"
+            fin: "】"
 
 extra_css:
-  - furigana.css
+    - furigana.css
 ```
