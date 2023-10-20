@@ -30,3 +30,16 @@ And include this CSS file in your MkDown project:
     font-size: 40%;
 }
 ```
+
+To enable the plugin and the CSS edit the `mkdocs.yml` file:
+
+```yaml
+plugins:
+  - furigana:
+      multiple: "§"
+      inicio: "【"
+      fin: "】"
+
+extra_css:
+  - furigana.css
+```
