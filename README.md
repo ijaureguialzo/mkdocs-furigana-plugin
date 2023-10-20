@@ -41,11 +41,11 @@ To enable the plugin and the CSS edit the `mkdocs.yml` file:
 
 ```yaml
 plugins:
-    -   furigana:
-            multiple: "§"
-            inicio: "【"
-            fin: "】"
+  - furigana:
+      multiple: "§"
+      inicio: "【"
+      fin: "】"
 
 extra_css:
-    - furigana.css
+  - furigana.css
 ```
