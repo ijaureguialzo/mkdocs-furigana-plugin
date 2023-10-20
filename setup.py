@@ -9,7 +9,7 @@ setup(
     url="https://github.com/ijaureguialzo/mkdocs-furigana-plugin",
     author="Ion Jaureguialzo Sarasola",
     author_email="ion@jaureguialzo.com",
-    license="Apache 2.0",
+    license="Apache-2.0",
     python_requires=">=3.9",
     install_requires=[
         "mkdocs>=1.4.1",
