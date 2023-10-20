@@ -25,10 +25,13 @@ class FuriganaPlugin(BasePlugin[FuriganaPluginConfig]):
     def on_page_context(self, context: TemplateContext, *, page: Page, config: MkDocsConfig,
                         nav: Navigation) -> TemplateContext:
         for i in page.toc.items:
-            i.title = self.eliminar_caracteres_control(i.title)
-            for j in i.children:
-                j.title = self.eliminar_caracteres_control(j.title)
+            self.recorrer_hijos(i)
         return context
+
+    def recorrer_hijos(self, item):
+        item.title = self.eliminar_caracteres_control(item.title)
+        for i in item.children:
+            self.recorrer_hijos(i)
 
     def reemplazar_expresiones(self, texto: str) -> str:
         reemplazo = (r'<span class="furigana-plugin">'
